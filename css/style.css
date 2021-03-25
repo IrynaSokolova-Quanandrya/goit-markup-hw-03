@@ -27,6 +27,7 @@ a {
   margin-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
+
   width: 1200px;
   outline: 2px solid tomato;
 }
@@ -57,7 +58,29 @@ span {
 }
 
 /*шапка навигации*/
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.site-nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+.site-nav-list li {
+  outline: 2px solid tomato;
+}
+
+.site-nav-list li:not(:last-child) {
+  margin-right: 45px;
+}
+
 .site-nav-list .link-current {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
   color: var(--accent-color);
 
   font-weight: 500;
@@ -66,6 +89,10 @@ span {
   letter-spacing: 0.02em;
 }
 .site-nav-list .link {
+  display: block;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
   color: #000000;
 
   font-weight: 500;
@@ -78,6 +105,14 @@ span {
   color: var(--accent-color);
 }
 
+.contacts-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-nav li + li {
+  margin-left: 50px;
+}
 .contacts-nav a {
   color: var(--primary-text-color);
 
