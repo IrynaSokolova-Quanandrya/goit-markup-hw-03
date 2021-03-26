@@ -291,7 +291,10 @@ span {
 /*PORTFOLIO*/
 
 /*filters*/
-
+.filter {
+  display: flex;
+  margin-bottom: 34px;
+}
 .filter-button {
   color: var(--title-text-color);
   font-family: inherit;
