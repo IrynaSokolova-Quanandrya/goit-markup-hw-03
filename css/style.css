@@ -18,18 +18,16 @@ a {
   margin-bottom: 0%;
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: tan;
 }
 .container {
+  width: 1200px;
+
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
-
-  width: 1200px;
-  outline: 2px solid tomato;
 }
 
 /*шапка сайта*/
@@ -58,7 +56,8 @@ span {
 }
 
 /*шапка навигации*/
-.main-nav {
+.main-nav,
+.contacts-nav {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -67,9 +66,6 @@ span {
 .site-nav-list {
   display: flex;
   margin-left: 93px;
-}
-.site-nav-list li {
-  outline: 2px solid tomato;
 }
 
 .site-nav-list li:not(:last-child) {
@@ -139,6 +135,19 @@ span {
 
 /*особенности*/
 
+.fetures {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.fetures-item {
+  flex-basis: calc((100% - 4 * 30px) / 4);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 .fetures .title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -151,7 +160,7 @@ span {
 }
 
 .fetures .text {
-  margin-bottom: 94px;
+  margin-top: 0;
   color: var(--primary-text-color);
 
   font-size: 14px;
@@ -167,7 +176,6 @@ span {
 .team > :nth-child(even) {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: teal;
 }
 
 .team .name {
@@ -192,8 +200,8 @@ span {
 .hero {
   background-color: #2f303a;
   text-align: center;
-  outline: 2px solid tomato;
 }
+
 .hero-title {
   margin-top: 0px;
   margin-bottom: 30px;
@@ -207,8 +215,10 @@ span {
   letter-spacing: 0.06em;
 }
 .hero-button {
-  color: var(--background-color);
+  margin-top: 0px;
+  margin-bottom: 200px;
 
+  color: var(--background-color);
   background-color: var(--accent-color);
 
   font-family: Roboto;
