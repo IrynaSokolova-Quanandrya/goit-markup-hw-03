@@ -5,6 +5,12 @@
   --background-color: #ffffff;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--primary-text-color);
   background-color: #ffffff;
@@ -36,8 +42,6 @@ p {
   margin-top: 0;
 }
 /*шапка сайта*/
-.page-header {
-}
 
 ul {
   padding: 0;
@@ -130,6 +134,39 @@ span {
   color: var(--accent-color);
 }
 
+/*блок герой*/
+.hero {
+  background-color: #2f303a;
+  text-align: center;
+}
+
+.hero-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+
+  color: var(--background-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+
+  letter-spacing: 0.06em;
+}
+.hero-button {
+  margin-top: 0px;
+  margin-bottom: 200px;
+
+  color: var(--background-color);
+  background-color: var(--accent-color);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
 /*секции*/
 .section-title {
   margin-bottom: 50px;
@@ -192,13 +229,21 @@ span {
   flex-basis: calc((100%-3 * 30px) / 3);
 }
 
-/*наща команда*/
-
+/*наша команда*/
+.our-team {
+  background: #f5f4fa;
+}
 .team {
   display: flex;
   justify-content: space-between;
 }
 
+.team-link {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .img {
   margin-top: 0;
   margin-bottom: 30px;
@@ -222,39 +267,6 @@ span {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
-}
-
-/*блок герой*/
-.hero {
-  background-color: #2f303a;
-  text-align: center;
-}
-
-.hero-title {
-  margin-top: 0px;
-  margin-bottom: 30px;
-
-  color: var(--background-color);
-
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
-
-  letter-spacing: 0.06em;
-}
-.hero-button {
-  margin-top: 0px;
-  margin-bottom: 200px;
-
-  color: var(--background-color);
-  background-color: var(--accent-color);
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 0.06em;
 }
 
 /*Footer*/
@@ -294,7 +306,12 @@ span {
 .filter {
   display: flex;
   margin-bottom: 34px;
+  justify-content: center;
 }
+.filter li:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
   color: var(--title-text-color);
   font-family: inherit;
@@ -302,6 +319,8 @@ span {
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.03em;
+  background: #f5f4fa;
+  border-radius: 4px;
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -310,8 +329,26 @@ span {
 }
 
 /*примеры работ*/
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+}
+.examples-link {
+  margin-bottom: 30px;
+  margin-left: 30px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+.examples-link:nth-child(3n + 1) {
+  margin-bottom: 0;
+  margin-left: 0;
+}
 
+a {
+  background-color: teal;
+}
 .examples-titel {
+  margin-bottom: 4px;
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -321,6 +358,7 @@ span {
 }
 
 .examples-type {
+  margin-bottom: 20px;
   color: var(--primary-text-color);
 
   font-size: 16px;
