@@ -44,7 +44,7 @@ ul {
   margin-top: 0;
 }
 
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -368,7 +368,7 @@ span {
 }
 
 .examples-link {
-  width: calc((100%-90px) / 3);
+  width: calc((100%-60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
